@@ -29,6 +29,17 @@ function updateClick () {
   console.log(`El número seleccionado por el usuario es ${selectedNumber}`);
   //checks data type: it is a string
   // console.log(typeof(selectedNumber));
+  if (selectedNumber === randomNumber) {
+    hint.innerHTML = "¡¡¡Has ganado campeona!!!";
+  } else if (selectedNumber < 0 || selectedNumber > 100) {
+    hint.innerHTML = "El número debe estar entre 0 y 100";
+  } else if (selectedNumber > randomNumber) {
+    hint.innerHTML = "Demasiado alto";
+  } else if (selectedNumber < randomNumber) {
+    hint.innerHTML = "Demasiado bajo";
+  } else {
+    hint.innerHTML = "Tienes que escribir antes un número";
+  }
 }
 
 //does not work ftm :(

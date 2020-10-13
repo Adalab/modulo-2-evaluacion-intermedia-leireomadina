@@ -38,11 +38,11 @@ function updateClick () {
   } else if (selectedNumber < randomNumber) {
     hint.innerHTML = "Demasiado bajo";
   } else {
-    hint.innerHTML = "Tienes que escribir antes un número :)";
+    hint.innerHTML = "Pista: escribe primero un número :)";
   }
   //updates the attemps each time the button is clicked
   updateAttemp();
 }
 
-//listener for the btn
+//listener for the button
 btn.addEventListener("click", updateClick);

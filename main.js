@@ -18,3 +18,12 @@ function getRandomNumber(max) {
 console.log(`Mi número aleatorio es ${randomNumber}`);
 
 
+//handler fot the btn listener
+function updateClick () {
+  //gets the input value
+  let selectedNumber = number.value;
+  console.log(`El número seleccionado por el usuario es ${selectedNumber}`);
+}
+
+//listener
+btn.addEventListener("click", updateClick);

@@ -31,8 +31,8 @@ function updateClick () {
   // console.log(typeof(selectedNumber));
   if (selectedNumber === randomNumber) {
     hint.innerHTML = "¡¡¡Has ganado campeona!!!";
-  } else if (selectedNumber < 0 || selectedNumber > 100) {
-    hint.innerHTML = "El número debe estar entre 0 y 100";
+  } else if (selectedNumber <= 0 || selectedNumber > 100) {
+    hint.innerHTML = "El número debe estar entre 1 y 100";
   } else if (selectedNumber > randomNumber) {
     hint.innerHTML = "Demasiado alto";
   } else if (selectedNumber < randomNumber) {

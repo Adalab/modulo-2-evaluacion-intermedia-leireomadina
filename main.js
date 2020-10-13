@@ -8,6 +8,8 @@ const attemps = document.querySelector(".js-attemps");
 
 //generates a random number between 0 and 100 each times the page is refreshed
 const randomNumber = getRandomNumber(100);
+//gets the input value
+// let selectedNumber;
 
 //creates a random number
 function getRandomNumber(max) {
@@ -16,14 +18,23 @@ function getRandomNumber(max) {
 
 //prints the random number in the console
 console.log(`Mi número aleatorio es ${randomNumber}`);
+//checks data type: it is a number
+// console.log(typeof(randomNumber));
 
 
 //handler fot the btn listener
 function updateClick () {
-  //gets the input value
-  let selectedNumber = number.value;
+  //gets the input value and converts it to a number data type
+  let selectedNumber = parseInt(number.value);
   console.log(`El número seleccionado por el usuario es ${selectedNumber}`);
+  //checks data type: it is a string
+  // console.log(typeof(selectedNumber));
 }
+
+//does not work ftm :(
+// function convertToNumber (string) {
+//   return parseInt(string);
+// }
 
 //listener
 btn.addEventListener("click", updateClick);

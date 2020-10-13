@@ -1,21 +1,20 @@
 "use strict";
 
-//tests if the js file works
-// alert ("Hola");
-
 //get html elements
 const number = document.querySelector(".js-number");
-// console.log(number);
 const btn = document.querySelector(".js-btn");
-// console.log(btn);
 const hint = document.querySelector(".js-hint");
-// console.log(hint);
 const attemps = document.querySelector(".js-attemps");
-// console.log(attemps);
+
+//generates a random number between 0 and 100 each times the page is refreshed
+const randomNumber = getRandomNumber(100);
 
 //creates a random number
 function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
 
-console.log(getRandomNumber(100));
+//prints the random number in the console
+console.log(`Mi número aleatorio es ${randomNumber}`);
+
+

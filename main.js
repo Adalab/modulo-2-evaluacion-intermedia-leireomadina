@@ -5,7 +5,7 @@ const number = document.querySelector(".js-number");
 const btn = document.querySelector(".js-btn");
 const hint = document.querySelector(".js-hint");
 const attemps = document.querySelector(".js-attemps");
-//generates a random number between 0 and 100 each time the page loads
+//generates a random number between 0 and 100 each time the page reloads
 const randomNumber = getRandomNumber(100);
 //sets the accumulator initial count to 0
 let acc = 0;
@@ -16,8 +16,6 @@ function getRandomNumber(max) {
 }
 //prints the random number in the console
 console.log(`Mi número aleatorio es ${randomNumber}`);
-//checks data type: it is already a number :)
-// console.log(typeof(randomNumber));
 
 //updates the attemps
 function updateAttemp () {
@@ -30,9 +28,7 @@ function updateAttemp () {
 function updateClick () {
   //gets the input value and converts it to a number data type
   let selectedNumber = parseInt(number.value);
-  console.log(`El número seleccionado por el usuario es ${selectedNumber}`);
-  //checks data type: converted to number :D
-  // console.log(typeof(selectedNumber));
+  //conditional statements:
   if (selectedNumber === randomNumber) {
     hint.innerHTML = "¡¡¡Has ganado campeona!!!";
   } else if (selectedNumber <= 0 || selectedNumber > 100) {
@@ -42,11 +38,11 @@ function updateClick () {
   } else if (selectedNumber < randomNumber) {
     hint.innerHTML = "Demasiado bajo";
   } else {
-    hint.innerHTML = "Tienes que escribir antes un número";
+    hint.innerHTML = "Tienes que escribir antes un número :)";
   }
   //updates the attemps each time the button is clicked
   updateAttemp();
 }
 
-//listener for the button
+//listener for the btn
 btn.addEventListener("click", updateClick);

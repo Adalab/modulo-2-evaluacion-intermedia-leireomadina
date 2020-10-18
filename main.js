@@ -5,6 +5,7 @@ const number = document.querySelector(".js-number");
 const btn = document.querySelector(".js-btn");
 const hint = document.querySelector(".js-hint");
 const attemps = document.querySelector(".js-attemps");
+const reset = document.querySelector('.js-reset');
 //generates a random number between 0 and 100 each time the page reloads
 const randomNumber = getRandomNumber(100);
 //sets the accumulator initial count to 0
@@ -49,5 +50,13 @@ function renderHint(string) {
   hint.innerHTML = string;
 }
 
+//reset attemps: sets the accumulator initial count to 0 again
+function resetBtn () {
+  acc = 0;
+  attemps.innerHTML = `Número de intentos: ${acc}`;
+}
+
 //listener for the button
 btn.addEventListener("click", updateClick);
+//listener for the reset button
+reset.addEventListener("click", resetBtn);

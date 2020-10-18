@@ -30,18 +30,23 @@ function updateClick () {
   let selectedNumber = parseInt(number.value);
   //conditional statements:
   if (selectedNumber === randomNumber) {
-    hint.innerHTML = "¡¡¡Has ganado campeona!!!";
+    renderHint("¡¡¡Has ganado campeona!!!");
   } else if (selectedNumber <= 0 || selectedNumber > 100) {
-    hint.innerHTML = "El número debe estar entre 1 y 100";
+    renderHint("El número debe estar entre 1 y 100");
   } else if (selectedNumber > randomNumber) {
-    hint.innerHTML = "Demasiado alto";
+    renderHint("Demasiado alto");
   } else if (selectedNumber < randomNumber) {
-    hint.innerHTML = "Demasiado bajo";
+    renderHint("Demasiado bajo");
   } else {
-    hint.innerHTML = "Pista: escribe primero un número :)";
+    renderHint("Pista: escribe primero un número :)");
   }
   //updates the attemps each time the button is clicked
   updateAttemp();
+}
+
+//to avoid using too many repetitions in the updateClick function
+function renderHint(string) {
+  hint.innerHTML = string;
 }
 
 //listener for the button

@@ -44,7 +44,7 @@ function updateClick () {
   updateAttemp();
 }
 
-//to avoid using too many repetitions in the updateClick function
+//to render the hint messages within the conditional statements
 function renderHint(string) {
   hint.innerHTML = string;
 }
